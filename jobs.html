@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<title>JavaJam Coffee House</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="javajam.css">
+
+
+<script type="text/javascript">
+function  func()
+{
+	var epattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$";
+	var name=document.getElementById("myName").value;
+	var mail=document.getElementById("myEmail").value;
+	var exp=document.getElementById("myExperience").value;
+
+	if(name=="")
+	{
+		alert('Please Enter Name');
+		return false;
+	}
+	else if(mail==""||!(mail.match(epattern)))
+	{
+		alert('Please Enter valid email');
+		return false;
+	}
+	else if(exp=="")
+	{
+		alert('Please Enter Experience');
+		return false;
+	}
+	return true;
+}
+
+</script>	
+</head>
+<body>
+<div id="wrapper">
+<header>
+	<h1>JavaJam Coffee House</h1>
+</header>
+<nav>
+	<ul>
+	<li><a href="home.html">Home</a></li>
+	<li><a href="menu.html">Menu</a></li>
+	<li><a href="music.html">Music</a></li>
+	<li><a href="jobs.html">Jobs</a></li>
+	</ul>
+</nav>
+<main>
+	<h2>Jobs at JavaJam</h2>
+	<p>Want to work at JavaJam? Fill out the form below to start your application. Required fields are marked with an asterisk (*).</p>
+	<form method="post" action="http://ajinkyaghadge.net/formhandle.php" onsubmit="return func()">
+					<label for="myName">*Name:</label><br><br>
+                    <dd><input type="text" id="myName" name="myName"></dd>
+                    <label for="myEmail">*E-mail:</label>
+                    <input type="text" type="email" id="myEmail" name="myEmail">
+                    <label for="myExperience">*Experience:</label>
+                    <textarea id="myExperience" name="myExperience" cols="20" rows="2"></textarea>
+                    <input type="submit" value="Apply Now" id="mySubmit" />
+	</form>
+</main>
+	<footer>Copyright &copy; 2016 JavaJam Coffee House<br>
+	<i><a href="#">ajinkya@ghadge.com</a></i>
+	</footer>
+</div>
+</body>
+</html>
